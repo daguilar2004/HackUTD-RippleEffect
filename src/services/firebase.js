@@ -3,8 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
-import firebase from 'firebase/app';
-import 'firebase/auth';
+
 
 // Your Firebase config (get it from your Firebase Console)
  
