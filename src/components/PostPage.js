@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 import { useState, useEffect } from 'react';
 
 import { useParams } from 'react-router-dom'
@@ -39,4 +37,3 @@ const PostPage = () => {
 }
 
 export default PostPage
->>>>>>> Stashed changes
