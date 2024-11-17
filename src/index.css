@@ -36,7 +36,7 @@ button:focus-visible {
   padding: 3px 4px;
   position: absolute; /* Allows precise positioning */
   border-radius: 5px; 
-  top: 30px; /* Distance from the top */
+  top: 33px; /* Distance from the top */
   right: 50px; /* Distance from the right */
   display: flex; /* Arrange buttons horizontally */
   gap: 10px; /* Add space between buttons */
@@ -48,7 +48,7 @@ button:focus-visible {
   padding: 3px 4px;
   position: absolute; /* Allows precise positioning */
   border-radius: 5px; 
-  top: 30px; /* Distance from the top */
+  top: 33px; /* Distance from the top */
   right: 150px; /* Distance from the right */
   display: flex; /* Arrange buttons horizontally */
   gap: 10px; /* Add space between buttons */
@@ -84,7 +84,7 @@ button:focus-visible {
 .search-input {
   padding: 10px;
   font-size: 16px;
-  color : black; /* Set text color */
+  color : #19350c; /* Set text color */
   background-color: white; /* White background */
   width: 1000px; /* Adjust the width of the search input */
   border: 3px solid #70A9BC; /* Light gray border */
@@ -92,7 +92,7 @@ button:focus-visible {
   outline: none; /* Remove default focus outline */
 }
 .search-input::placeholder {
-  color: black; /* Change the placeholder text color to black */
+  color: #19350c; /* Change the placeholder text color to black */
 }
 
 .search-button {
@@ -102,4 +102,122 @@ button:focus-visible {
   border: none;
   border-radius: 3px; /* Rounded corners */
   cursor: pointer;
+}
+
+.perfect {
+  color: #19350c; /* Green text color */
+  font-size: x-large;
+  font-weight: bold; /* Bold text */
+  text-align: center; 
+  margin-bottom: 1rem; /* Optional: Adds space between the two elements */
+}
+.explore{
+  color: #19350c; /* Green text color */
+  font-size: medium;
+  font-weight: bold; /* Bold text */
+  margin-bottom: 1rem; /* Optional: Adds space between the two elements */
+}
+.underline {
+  display: block;
+  width: 200px; /* Set the length of the underline */
+  height: 2px;
+  background-color: #19350c;
+  margin: 0 auto; /* Centers the underline horizontally */
+  margin-top: 10px;
+}
+.container {
+  display: flex;
+  gap: 20px; /* Space between boxes */
+  justify-content: center; /* Align boxes in the center */
+  padding: 20px;
+}
+
+.box {
+  width: 300px; /* Consistent box width */
+  text-align: center;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+.image {
+  width: 100%; /* Full width */
+  height: 300px; /* Consistent height */
+  object-fit: cover; /* Crop the image to fit the box */
+  border-bottom: 2px solid #ccc; /* Optional styling */
+}
+.box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(64, 104, 104, 0.72);
+  ; /* Light blue with transparency */
+  pointer-events: none; /* Allows interaction with the image */
+}
+.text {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.overlay-image {
+  position: absolute; /* Layers the image on top */
+  top: 20px; /* Adjusts vertical position */
+  left: 20px; /* Adjusts horizontal position */
+  width: 100px; /* Controls size of the overlay image */
+  height: 100px; /* Ensures consistent dimensions */
+  object-fit: contain;
+  z-index: 2; /* Places this above the base image */
+  pointer-events: none; /* Ensures clicks pass through the overlay */
+}
+
+.text-overlay {
+  position: absolute; /* Position relative to .image-container */
+  top: 80%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to perfect centering */
+  color: white; /* Text color */
+  font-size: 24px; /* Text size */
+  font-weight: bold; /* Text weight */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adds a shadow for better readability */
+  z-index: 2; /* Places text above the image */
+}
+
+.pfp{
+  position: absolute; /* Allows precise positioning */
+  top: 27px; /* Distance from the top */
+  right: 100px; /* Distance from the right */
+  z-index: 10;
+}
+.vertical {
+  background-color: white; /* White background for the container */
+  margin: 20px auto; /* Center and space between containers */
+  padding: 20px; /* Inner padding */
+  max-width: 800px; /* Maximum width */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center text */
+  z-index: 0;
+}
+
+.bg-image {
+  background-color: white;
+  position: absolute; /* Fix it to the background */
+  top: 5;
+  width: 100%;
+  height: 123%;
+  object-fit: cover; /* Ensure it fills the container */
+  z-index: -1; /* Place it behind other elements */
+}
+.container-image {
+  max-width: 150px; /* Set a maximum width */
+  height: auto; /* Maintain aspect ratio */
+}
+.name {
+  color: #19350c; /* Green text color */
+  font-size: x-large;
+  font-weight: bold; /* Bold text *//* Optional: Adds space between the two elements */
+  flex: 1;  /* Add spacing below heading */
 }
