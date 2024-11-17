@@ -16,7 +16,7 @@ function App() {
     // using React's router to route components to pages for the website
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Profile />} />
         <Route path="/post/:id" element={<PostPage />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/register" element={<RegisterForm />} />
