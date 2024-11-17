@@ -1,3 +1,5 @@
+
+
 import { useState, useEffect } from 'react';
 
 import { useParams } from 'react-router-dom'
@@ -30,9 +32,11 @@ const PostPage = () => {
       <div className='flex flex-row gap-2'>
         <button onClick={handleLike}>👍</button>
         <p><b>{post.likes}</b></p>
+        <h> HIIIII </h>
       </div>
     </div>
   )
 }
 
 export default PostPage
+
