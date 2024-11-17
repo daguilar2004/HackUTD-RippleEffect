@@ -1,64 +1,58 @@
 import React, { useState } from 'react';
-import AuthService from '../services/auth.service';
-import './RegisterForm.css';
+import './RegisterForm.css'; // Import your custom CSS file for additional styling if needed
 
 const RegisterForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    setError(''); // Clear any previous error
-    
-    if (!email || !password) {
-      setError('Please fill out both email and password fields');
-      return;
-    }
-  
-    try {
-      const user = await AuthService.register(email, password);
-      console.log('User registered:', user);
-    } catch (err) {
-      console.error('Registration error:', err); // Log the detailed error
-      // Display a more detailed error message
-      if (err.code === 'auth/email-already-in-use') {
-        setError('This email is already in use. Please choose another one.');
-      } else if (err.code === 'auth/weak-password') {
-        setError('Password is too weak. Please use a stronger password.');
-      } else {
-        setError('Error registering user. Please try again later.');
-      }
-    }
+    // Handle the registration logic here
   };
-  
-  
 
   return (
-    <div class ="flex-auto h-full bg-black border-spacing-1">
-      <h2>Register</h2>
-      {error && <p>{error}</p>}
-      <form onSubmit={handleRegister}>
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Register</button>
-      </form>
+    <div className="bg-no-repeat bg-center bg-fixed bg-cover w-full h-screen" style={{ backgroundImage: 'url(/Pattern.jpg)' }}>
+      <div className="main bg-white w-[600px] mx-auto rounded-lg shadow-xl p-8 mt-32">
+        <h1 className="text-3xl font-extrabold text-center text-gray-600 mb-8">Create an Account</h1>
+
+        <form onSubmit={handleRegister} className="space-y-6">
+          <div className="form-group">
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="w-full p-3 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              className="w-full p-3 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+          </div>
+          <div className="form-group">
+            <button
+              type="submit"
+              className="w-full py-3 bg-blue-400 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition-all"
+            >
+              Register
+            </button>
+          </div>
+        </form>
+
+        <p className="text-center text-sm text-gray-600 mt-4">
+          Already have an account?{' '}
+          <a href="/login" className="text-gray-600 hover:text-gray-700">
+            Log in here
+          </a>
+        </p>
+      </div>
     </div>
   );
 };
