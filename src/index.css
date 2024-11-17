@@ -191,33 +191,64 @@ button:focus-visible {
   right: 100px; /* Distance from the right */
   z-index: 10;
 }
-.vertical {
-  background-color: white; /* White background for the container */
-  margin: 20px auto; /* Center and space between containers */
-  padding: 20px; /* Inner padding */
-  max-width: 800px; /* Maximum width */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  text-align: center; /* Center text */
-  z-index: 0;
+.background-image {
+  background-image: url('C:/Users/basil/OneDrive/Desktop/VS_Code_Projects/HackUTD-RippleEffect/public/Pattern.png'); /* Replace with your image */
+  background-size: cover; /* Make the background cover the entire area */
+  background-color: white;
+  background-position: center; /* Center the background */
+  background-repeat: no-repeat; /* Avoid repeating the image */
+  position: relative; /* Establish stacking context for the containers */
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px; /* Add padding to give space around the containers */
 }
 
-.bg-image {
-  background-color: white;
-  position: absolute; /* Fix it to the background */
-  top: 5;
-  width: 100%;
-  height: 123%;
-  object-fit: cover; /* Ensure it fills the container */
-  z-index: -1; /* Place it behind other elements */
+/* Vertically Stacked Containers */
+.vertical {
+  display: flex; /* Use flexbox for side-by-side layout */
+  align-items: center; /* Vertically center image and text */
+  background-color: white; /* Light background for the container */
+  padding: 20px; /* Add padding inside the container */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+  max-width: 800px; /* Optional: Limit container width */
+  margin: 20px auto; /* Center container horizontally */
 }
-.container-image {
-  max-width: 150px; /* Set a maximum width */
-  height: auto; /* Maintain aspect ratio */
+
+/* Text Styling */
+.vertical h2 {
+    position: absolute; /* Allows precise positioning */
+    top: 50px; /* Distance from the top */
+    right: 550px; /* Distance from the right */
+  font-size: 1.5rem; /* Larger text for heading */
+  color: rgba(25, 53, 12, 1); /* Dark text */
 }
-.name {
-  color: #19350c; /* Green text color */
-  font-size: x-large;
-  font-weight: bold; /* Bold text *//* Optional: Adds space between the two elements */
-  flex: 1;  /* Add spacing below heading */
+
+.vertical p1 {
+  position: absolute; /* Allows precise positioning */
+  top: 130px; /* Distance from the top */
+  right: 550px; /* Distance from the right */
+font-size: 1rem; /* Larger text for heading */
+color: rgba(25, 53, 12, 1); /* Dark text */
+}
+.edit{
+  border: 3px solid rgba(112, 169, 188, 1); /* Set border thickness and color */
+  background-color:rgba(112, 169, 188, 1);
+  padding: 3px 4px;
+  position: absolute; /* Allows precise positioning */
+  border-radius: 5px; 
+  top: 60px; /* Distance from the top */
+  right: 250px; /* Distance from the right */
+  display: flex; /* Arrange buttons horizontally */
+  gap: 10px; /* Add space between buttons */
+}
+.view{
+  border: 3px solid rgba(112, 169, 188, 1); /* Set border thickness and color */
+  background-color:rgba(112, 169, 188, 1);
+  padding: 3px 4px;
+  position: absolute; /* Allows precise positioning */
+  border-radius: 5px; 
+  top: 240px; /* Distance from the top */
+  right: 250px; /* Distance from the right */
+  display: flex; /* Arrange buttons horizontally */
+  gap: 10px; /* Add space between buttons */
 }
