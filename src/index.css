@@ -247,8 +247,34 @@ color: rgba(25, 53, 12, 1); /* Dark text */
   padding: 3px 4px;
   position: absolute; /* Allows precise positioning */
   border-radius: 5px; 
-  top: 240px; /* Distance from the top */
+  top: 250px; /* Distance from the top */
   right: 250px; /* Distance from the right */
   display: flex; /* Arrange buttons horizontally */
   gap: 10px; /* Add space between buttons */
 }
+.vertical h3 { /* Allows precise positioning */
+margin-bottom: 200px;
+font-size: 1.5rem; /* Larger text for heading */
+color: rgba(25, 53, 12, 1); /* Dark text */
+
+}
+.vertical p {
+  position: absolute;/* Allows precise positioning */
+  font-size: 1rem; /* Larger text for heading */
+  color: rgba(104, 125, 50, 1); /* Dark text */
+  top: 320px; /* Distance from the top */
+  right: 950px; /* Distance from the right */
+  }
+.vertical p3{
+  position: absolute;/* Allows precise positioning */
+  font-size: 1rem; /* Larger text for heading */
+  color: rgba(25, 53, 12, 1); /* Dark text */
+  top: 360px; /* Distance from the top */
+  right: 780px; /* Distance from the right */
+}
+.vertical p4 { /* Allows precise positioning */
+  margin-bottom: 200px;
+  font-size: 1.5rem; /* Larger text for heading */
+  color: rgba(25, 53, 12, 1); /* Dark text */
+  
+  }

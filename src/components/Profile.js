@@ -18,12 +18,14 @@ const Profile = () => {
           <button class="edit">Edit Profile</button>
         </div>
         <div className="vertical">
-          <h3>Container 2</h3>
-          <p>This is the second container.</p>
+          <h3>Profile Information</h3>
+          <p>Email</p>
+          <p3>damian.aguilar@hackutd.com</p3>
+          <p4>Phone Number</p4>
           <button class="view">View Waivers</button>
         </div>
         <div className="vertical">
-          <p>Your Pinboard</p>
+          <p12>Your Pinboard</p12>
         </div>
       </div>
     </div>
