@@ -7,13 +7,13 @@ const Menu = () => {
 
   // default state for a user, values to be rendered on the menu component
   const [user, setUser] = useState({
-    username: "default_user",
-    firstName: "First",
-    lastName: "Last"
+    username: "default_user", 
+    firstName: "First Name",
+    lastName: "Last Name"
   })
 
   return (
-
+ 
     // root div of the component should define the overall style of the container itself
     <div className='w-96 p-6 flex flex-col items-center bg-neutral-700 rounded-xl mt-20'>
 

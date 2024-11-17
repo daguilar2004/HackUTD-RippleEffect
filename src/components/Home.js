@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 import { useState } from 'react';
 
 // import other components to be rendered in the Home page
@@ -83,4 +81,3 @@ const Home = () => {
 }
 
 export default Home
->>>>>>> Stashed changes
