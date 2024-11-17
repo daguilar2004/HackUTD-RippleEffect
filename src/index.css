@@ -9,7 +9,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: rgb(38 38 38);
+  background-color: rgb(214, 211, 204);
 }
 
 a {
@@ -25,10 +25,81 @@ h2 {
   font-size: large;
 }
 
-button:hover {
-  border-color: #6b7280;
-}
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.top-right-button1 {
+  border: 3px solid rgba(104,125,50,255);; /* Set border thickness and color */
+  color:rgba(104,125,50,255);
+  padding: 3px 4px;
+  position: absolute; /* Allows precise positioning */
+  border-radius: 5px; 
+  top: 30px; /* Distance from the top */
+  right: 50px; /* Distance from the right */
+  display: flex; /* Arrange buttons horizontally */
+  gap: 10px; /* Add space between buttons */
+}
+
+.top-right-button2{
+  border: 3px solid rgba(104,125,50,255);; /* Set border thickness and color */
+  background-color:rgba(104,125,50,255);
+  padding: 3px 4px;
+  position: absolute; /* Allows precise positioning */
+  border-radius: 5px; 
+  top: 30px; /* Distance from the top */
+  right: 150px; /* Distance from the right */
+  display: flex; /* Arrange buttons horizontally */
+  gap: 10px; /* Add space between buttons */
+  
+}
+
+.image-container {
+  margin-bottom: 20px; /* Adds padding below the container */
+}
+
+.centered-image {
+  display: block; /* Makes the image behave as a block-level element */
+  width: 2000px; /* Set a specific width */
+  height: 200px; /* Set a specific height */
+  object-fit: cover; /* Ensures the image maintains its aspect ratio */
+}
+
+@media (max-width: 600px) {
+  .search-input {
+    width: 300px; /* Smaller width on smaller screens */
+  }
+  .search-button {
+    padding: 8px 16px; /* Adjust button size */
+  }
+}
+.search-container {
+  display: flex; /* Use flexbox to align input and button */
+  justify-content: center; /* Center the search bar horizontally */
+  margin-top: 30px; /* Add space above the search bar */
+  margin-bottom: 30px;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  color : black; /* Set text color */
+  background-color: white; /* White background */
+  width: 1000px; /* Adjust the width of the search input */
+  border: 3px solid #70A9BC; /* Light gray border */
+  border-radius: 3px; /* Rounded corners */
+  outline: none; /* Remove default focus outline */
+}
+.search-input::placeholder {
+  color: black; /* Change the placeholder text color to black */
+}
+
+.search-button {
+  padding: 13px 20px;
+  background-color: #70A9BC; /* Green background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 3px; /* Rounded corners */
+  cursor: pointer;
 }

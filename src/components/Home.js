@@ -1,69 +1,34 @@
-import { useState } from 'react';
-
-// import other components to be rendered in the Home page
-import Post from './common/Post'
-import Menu from './common/Menu'
-
 const Home = () => {
-
-  // example posts to test state with, this will be replaced in time with a more dynamic solution
-  const [posts, setPosts] = useState([
-    {
-      id: '1',
-      title: 'First Post',
-      description: 'This is the description of the first post.',
-      likes: 5,
-      comments: [
-        'Great post!',
-        'Thanks for sharing!',
-        'Very informative!'
-      ]
-    },
-    {
-      id: '2',
-      title: 'Second Post',
-      description: 'This is the description of the second post.',
-      likes: 10,
-      comments: [
-        'I learned a lot!',
-        'Interesting read!',
-        'Can you elaborate more?'
-      ]
-    },
-    {
-      id: '3',
-      title: 'Third Post',
-      description: 'This is the description of the third post.',
-      likes: 2,
-      comments: [
-        'Nice perspective!',
-        'I disagree with some points.',
-        'Looking forward to your next post!'
-      ]
-    }
-  ]);
-
-  // return for this function returns the JSX of the React component
   return (
-    <div className="h-full">
-      <div className="flex flex-row w-full gap-8">
-        <Menu /> {/* abstract menu into it's own common component */}
-        <div id="content" className="p-6 w-full bg-neutral-700 rounded-xl">
+    <>
+      <img className="pl-2 pb-4 w-22 h-20" src="/PINIT.png" alt="Description" /> 
+      <button class="top-right-button1">Sign Up</button>
+      <button class="top-right-button2">Login</button>
+      <div className="h-full">
+      <div class="image-container">
+     <img className="centered-image" src= "https://s3-alpha-sig.figma.com/img/7fef/618f/d4115acc54fc620eb5dd52249742fd7b?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WHvT1A5o9-uEW4xDyvj7VIkQ7lSipvzGKI173oe3UgKlTs9AhGQJSgmhlThbcHk11ZUHrICG5YqwhQtPzRAoHtmMwOo5zQaGf7dTfEZnc89q6FXZuPsp201ZIOUh22I9wP~pEKBxKQlVgDLr9MniKu8IEeC3C5U23VhN3vkYmYmAlE1vZtYh~MoX0R733W05rSoZaJ1WTv1xIzDhHUF1G1AUYv8S7KKRjvi-K2tO7JdCxVaqDof0HpbQLIvQAQg4v4aSpMBD9ZhzJM3p8Qjua2vF~gAwUcLqe4BKw~~wqsga4JyGeJj~P0irwfLzlF7NmqSbibZ2P8ri85-kRT9~bw__" />
+     </div>
+     <div class="search-container">
+  <form action="/search" method="get">
+    <input type="text" name="query" placeholder="Search for a volunteering opportunity" class="search-input" />
+    <button type="submit" class="search-button">Search</button>
+    </form>
+    </div>
+    
+      <div className="flex flex-row w--full gap-0">
+        <div id="content" className="p-6 w-full bg-neutral-400 rounded-xl">
           <div className="flex flex-col items-start justify-start">
             <h1 className="text-left"><b>Home Feed</b></h1>
-            <p className="text-left">See the latest and most popular posts from your fellow comets!</p>
+            <p className="text-left">See the latest post from organizations!</p>
           </div>
           <div className="flex flex-wrap gap-8 my-8 w-full">
 
-            {/* map function iterates through all posts to render them on the feed */}
-            {posts.map((post) => (
-              <Post id={post.id} title={post.title} description={post.description} likes={post.likes} comments={post.comments} />
-            ))}
           </div>
         </div>
-      </div>
     </div>
-  )
+    </div>
+    </>
+  );
 }
 
 export default Home
