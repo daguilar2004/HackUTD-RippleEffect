@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import React from 'react';
 const Post = (props) => {
+
+  
 
   // state to track the amount of likes for this individual post
   const [likes, setLikes] = useState(0);
@@ -12,6 +14,8 @@ const Post = (props) => {
   }
 
   return (
+
+    
 
     // root div of the component should define the overall style of the container itself
     <div className='p-6 bg-neutral-800 rounded-xl'>
@@ -24,6 +28,7 @@ const Post = (props) => {
         {/* Link to a page version of the post, page is empty for now */}
         <Link to={`/post/${props.id}`}>View Full Post</Link>
 
+        
         {/* button to increment the likes state */}
         <div className='flex flex-row gap-4'>
           <button onClick={handleLike}>Like</button>
