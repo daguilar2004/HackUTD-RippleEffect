@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import RegisterForm from './components/RegisterForm';
+
 
 // import pages to be routed by the React router
 import Home from './components/Home';
@@ -17,6 +19,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/post/:id" element={<PostPage />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/register" element={<RegisterForm />} />
+        
       </Routes>
     </BrowserRouter>
   );
