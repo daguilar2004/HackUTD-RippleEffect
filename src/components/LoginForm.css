@@ -1,10 +1,10 @@
 body {
-    background-color: #F3EBF6;
+    background-color: #f7f7f7;
     font-family: 'Ubuntu', sans-serif;
 }
 
 .main {
-    background-color: #FFFFFF;
+    background-color: #e3dddd;
     width: 600px;
     height: 500px;
     margin: 7em auto;
@@ -74,7 +74,7 @@ font-family: 'Ubuntu', sans-serif;
 .submit {
   cursor: pointer;
     border-radius: 5em;
-    color: #fff;
+    color: #ffffff;
     background: linear-gradient(to right, #355c9a, #6a96db);
     border: 0;
     padding-left: 40px;
